@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sub</title>
+    <style>
+        .adaptable{
+            height : 90%;
+            width : 95%;
+            position:relative;
+            overflow:auto;
+            min-height: 500px;
+        }
+        .head{
+            background-color:red;
+        }
+    </style>
+    <script>
+        function linkChange(){
+            document.getElementById("link").src = document.getElementById("linkURL").value;
+        }
+    </script>
+</head>
+<body><center>
+    <h1 class = "head" style="color:darkblue">My First Sub Window</h1>
+    <form>
+        <input type="text" id = "linkURL">
+        <input type="button" value="Go" onclick="linkChange()">
+        <iframe class = "adaptable" allowfullscreen id="link">
+        </iframe>
+</form>
+</center></body>
+</html>

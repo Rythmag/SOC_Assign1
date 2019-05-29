@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sub</title>
+    <style>
+        .adaptable{
+            
+            position:relative;
+            overflow:auto;
+            min-height: 500px;
+        }
+        .head{
+            background-color:red;
+        }
+        .windowsize{
+        }
+    </style>
+    <script>
+        function linkChange(){
+            document.getElementById("link").src = document.getElementById("linkURL").value;
+        }
+        function Rsize(){
+            //var h = typeof document.getElementById("link").height;
+            //alert(h);
+            document.getElementById("link").height = document.getElementById("height").value;
+            document.getElementById("link").width = document.getElementById("width").value;
+        }
+        var input = document.getElementById("text");
+        input.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("button").click();
+        }
+        }); 
+    </script>
+</head>
+<body><center>
+    <h1 class = "head" style="color:darkblue">My First Sub Window</h1>
+    <form>
+        URL:<input type="text" id = "linkURL"></input>
+        <input type="button" value="Go" onclick="linkChange()"></input><br>
+        height:<input type="text" id ="height"></input>
+        width:<input type="text" id="width"></input>
+        </input><input type="button" value="resize" onclick="Rsize()"></input><br>
+        <iframe class = "adaptable" allowfullscreen id="link" width = "80%">
+        </iframe>
+</form>
+</center></body>
+</html>

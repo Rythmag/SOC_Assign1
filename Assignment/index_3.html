@@ -1,0 +1,35 @@
+x<!DOCTYPE html>
+<html>
+<head>
+    <title>Sub</title>
+    <style>
+        .adaptable{
+            height : 90%;
+            width : 95%;
+            position:relative;
+            overflow:auto;
+            min-height: 500px;
+        }
+        .head{
+            background-color:red;
+        }
+    </style>
+    <script>
+        function linkChange(){
+            var data = document.getElementById("id1").value;
+            document.getElementById("link").src = data;
+        }
+    </script>
+</head>
+<body><center>
+    <h1 class = "head" style="color:darkblue">My First Sub Window</h1>
+    <select id="id1">
+        <option value="https://theoatmeal.com/">OatMeal</option>
+        <option value="https://asoftmurmur.com/">Soft Murmur</option>
+        <option value="https://codepen.io/akm2/full/rHIsa">Gravity</option>
+    </select>
+    <input type="button" value="Go" onclick="linkChange()">
+    <iframe src ="https://theoatmeal.com/" class = "adaptable" allowfullscreen id="link">
+    </iframe>
+</center></body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sub</title>
+    <style>
+        body{
+            background-image: url("https://images.pexels.com/photos/1308624/pexels-photo-1308624.jpeg?cs=srgb&dl=4k-wallpaper-architecture-background-1308624.jpg&fm=jpg");
+            background-repeat: no-repeat;
+            background-size:100% 100%;
+            color: aqua;
+            font-size: 200%;
+
+        }
+        .adaptable{
+            position:relative;
+            overflow:auto;
+        }
+        .head{
+            background-color:red;
+            font-size:200%;
+        }
+       
+    </style>
+    <script>
+        function linkChange(){
+            document.getElementById("link").src = document.getElementById("linkURL").value;
+        }
+        function Rsize(){
+            document.getElementById("link").width = document.getElementById("width").value;
+            document.getElementById("link").height = document.getElementById("height").value;
+        }
+    </script>
+</head>
+<body><center>
+    <h1 class = "head" style="color:darkblue">My First Sub Window</h1>
+    <form>
+        URL:<input type="text" id = "linkURL"></input>
+        <input type="button" value="Go" onclick="linkChange()"></input><br>
+        height:<input type="text" id ="height"></input>
+        width:<input type="text" id="width"></input>
+        </input><input type="button" value="resize" onclick="Rsize()"></input><br>
+        <iframe class = "adaptable" allowfullscreen id="link" width = "80%" height="900px"> </iframe><br>
+        <input type="button" value="Pixels"onclick="pix()"></input>
+</form>
+</center></body>
+</html>
